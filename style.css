@@ -1,0 +1,339 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.carousel-item img {
+  width: auto;
+  height: 85dvh;
+  object-fit: cover;
+  position: relative;
+}
+
+.carousel-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1); /* semi-transparent black */
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+}
+.modal-header {
+  background-color: #3f51b5;
+  color: white;
+}
+.modal-footer {
+  background-color: #f1f1f1;
+}
+.form-group {
+  margin-bottom: 1.5rem;
+}
+.btn-primary {
+  background-color: #3f51b5;
+  border: none;
+}
+.btn-primary:hover {
+  background-color: #303f9f;
+}
+.btn-custom-outline {
+  border-color: #3f51b5;
+  color: #3f51b5;
+}
+.btn-custom-outline:hover {
+  background-color: #3f51b5;
+  color: white;
+}
+.copy-btn {
+  position: absolute;
+  top: 120px;
+  left: 5px;
+}
+.position-relative {
+  position: relative;
+}
+.first-window {
+  position: relative;
+  background-image: url(imgs/image1.jpg);
+  height: 50dvh;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.first-window-outlook {
+  height: 50dvh;
+  background-color: #3f51b5;
+  opacity: 0.7;
+  border-radius: 10px;
+  text-align: center;
+}
+.window-icon {
+  font-size: 20px;
+  color: aliceblue;
+  float: left;
+  width: 25%;
+  margin-top: 100px;
+}
+/* best player cards */
+.bp-card {
+  position: relative;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  transition: transform 0.3s;
+}
+.bp-card:hover {
+  transform: scale(1.05);
+}
+.bp-card:after,
+.bp-card:before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  background-color: rgba(0, 58, 58, 0);
+  z-index: 1; /* Ensure the overlay is above the content */
+}
+.bp-card:after {
+  top: 0;
+  left: 0;
+}
+.bp-card:before {
+  bottom: 0;
+  right: 0;
+}
+.bp-card:hover:after,
+.bp-card:hover:before {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(6, 37, 160, 0.4);
+  transition: 1s;
+}
+.bp-card:hover .card-title {
+  color: #f1f1f1;
+}
+.card-img-top {
+  width: 100%;
+  height: 200px; /* Fixed height for images */
+  object-fit: cover;
+}
+.card-body {
+  padding: 20px;
+}
+.card-title {
+  font-size: 1.25em;
+  font-weight: bold;
+  display: inline-block;
+}
+.card-description {
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: #666;
+}
+.btn-play {
+  float: right;
+}
+/*  */
+.second-window {
+  position: relative;
+  background-image: url(imgs/image2.jpg);
+  height: 50dvh;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.second-window-outlook {
+  height: 50dvh;
+  background-color: #3f51b5;
+  opacity: 0.7;
+  border-radius: 10px;
+  text-align: center;
+}
+.second-window-icon {
+  font-size: 20px;
+  color: aliceblue;
+  float: left;
+  width: 25%;
+  margin-top: 100px;
+}
+.coach-card {
+  position: relative;
+  overflow: hidden;
+  color: white;
+  text-align: left;
+  height: 300px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.coach-card-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(100%);
+  transition: background-color 0.3s, filter 0.3s;
+}
+.coach-card:hover {
+  transform: scale(0.95);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.coach-card:hover .coach-card-bg {
+  background-color: rgba(173, 216, 230, 0.5); /* Light blue overlay on hover */
+  filter: grayscale(0%);
+}
+.coach-card-content {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 2;
+}
+.coach-card-content h3 {
+  margin-top: 0;
+}
+.coach-card-image {
+  position: absolute;
+  bottom: 150px;
+  left: 10px;
+  width: 90px;
+  height: 120px;
+  border-radius: 50%;
+  border: 2px solid white;
+  overflow: hidden;
+}
+.coach-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.small-title {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.smaller-title {
+  font-size: 12px;
+}
+.social-icons {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  z-index: 1000;
+}
+.social-icons a {
+  display: block;
+  margin: 20px 0;
+  color: white;
+  background-color: #303f9f;
+  padding: 10px;
+  border-radius: 13%;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  transition: background-color 0.3s, color 0.3s;
+}
+.social-icons a:hover {
+  background-color: white;
+  color: #303f9f;
+}
+/* ------------ */
+
+.podcast-card {
+  display: flex;
+  width: 80vw;
+  height: 50vh;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  position: relative;
+  margin-bottom: 100px;
+}
+.podcast-content {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.podcast-image {
+  width: 25%;
+  height: 100%;
+  background-image: url("https://via.placeholder.com/800x400");
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
+  border-radius: 2%;
+}
+.podcast2-image {
+  width: 25%;
+  height: 100%;
+  background-image: url("https://via.placeholder.com/800x400");
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(0 0, 90% 0, 100% 100%, 0 100%);
+  border-radius: 2%;
+}
+.podcast-title {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.podcast-date {
+  color: gray;
+  margin-bottom: 10px;
+}
+.podcast-description {
+  margin-bottom: 10px;
+}
+.podcast-tags {
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+}
+.tag {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #e0e0e0;
+  color: #333;
+  font-size: 0.9em;
+}
+.tag i {
+  margin-right: 5px;
+}
+.tag:hover {
+  background-color: #303f9f;
+  color: #f1f1f1;
+}
+
+@media (max-width: 767px) {
+  /* Adjust for screen sizes less than 768px */
+  .podcast-card {
+    flex-direction: column;
+    height: 250px;
+  }
+  .podcast-image,
+  .podcast2-image {
+    width: 100%;
+    height: 20%; /* Occupy 20% of the card height */
+    clip-path: none; /* Remove the clip-path */
+    border-radius: 3%; /* Set the border-radius to 3% */
+  }
+  .podcast-content {
+    padding-top: 0; /* Remove the top padding for the content */
+  }
+}
+.bg-info {
+  background-color: #303f9f !important;
+  color: #f1f1f1 !important;
+}
